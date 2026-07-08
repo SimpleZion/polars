@@ -357,8 +357,8 @@ class IcebergScanResolver:
         fallback_reason = (
             "forced reader_override='pyiceberg'"
             if reader_override == "pyiceberg"
-            else f"unsupported table format version: {tbl.format_version}"
-            if not tbl.format_version <= 2
+            # else f"unsupported table format version: {tbl.format_version}"
+            # if not tbl.format_version <= 2
             else None
         )
 
